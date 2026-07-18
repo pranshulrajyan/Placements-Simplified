@@ -54,14 +54,17 @@
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone [https://github.com/ypranshulrajyan/placements-simplified.git](https://github.com/pranshulrajyan/placements-simplified.git)
-   cd placements-simplified
-
-1. Install the Project dependencies:
+    ```bash
+    git clone https://github.com/ypranshulrajyan/placements-simplified.git
+    ```
+   
+1. Install the project dependencies:
+    ```bash
     npm install
-
+    ```
 2. Start the local development server:
+    ```bash
     npm run dev
-
+    ```
 3. Access the web app locally at http://localhost:5173
+   
