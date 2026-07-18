@@ -1,4 +1,4 @@
-import posthog from 'posthog-js';
+import posthog from 'posthog-js/dist/module.full.no-external'
 import './style.css';
 
 posthog.init('phc_zHQqzJta9daxdCjXxVCB5w3xvRCsChUfTz7jVyQ2E8k', {
@@ -6,6 +6,8 @@ posthog.init('phc_zHQqzJta9daxdCjXxVCB5w3xvRCsChUfTz7jVyQ2E8k', {
   defaults: '2026-05-30',
   capture_pageview: true
 });
+
+posthog.capture('$pageview');
 
 // -------------------------------------------------------------
 // Google Sign-In (OAuth) Credentials Configuration
