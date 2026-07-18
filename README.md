@@ -67,4 +67,7 @@
     npm run dev
     ```
 3. Access the web app locally at http://localhost:5173
-   
+
+## 👨‍💻 Author
+
+**Pranshul Rajyan**
