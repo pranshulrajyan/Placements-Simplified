@@ -1,0 +1,1487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Placements Simplified - Curated high-yield preparation materials, roadmaps, project blueprints, and company program directories to secure your dream tech placement." />
+    <title>Placements Simplified | Curated Preparation Roadmaps &amp; Resources</title>
+    <meta name="google-site-verification" content="8HtMFBO-G71Y2O8UG7yiuR-L2_bnkzJo090ARyh1LJ4" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Google Identity Services SDK -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Vercel Web Analytics -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      const script = document.createElement('script');
+      script.defer = true;
+      script.src = '/_vercel/insights/script.js';
+      document.head.appendChild(script);
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header / Sticky Nav -->
+      <header class="main-header">
+        <div class="header-container">
+          <a href="#" class="logo-brand">
+            <span class="logo-accent">Placements</span> Simplified
+          </a>
+          <nav class="main-nav">
+            <a href="#domains" class="nav-link">Domains &amp; Plans</a>
+            <a href="#projects" class="nav-link">Projects Lab</a>
+            <a href="#company-offers" class="nav-link">Company Links</a>
+          </nav>
+          <button id="header-auth-btn" class="btn btn-secondary" style="height: 34px; padding-inline: 1rem; font-size: 0.82rem; font-weight: 600; margin-inline-start: 0.5rem; display: flex; align-items: center; justify-content: center;">Sign In</button>
+        </div>
+      </header>
+
+      <main class="page-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-content">
+            <div class="badge">Curated Placement Accelerator</div>
+            <h1 class="hero-title">Cut the Crowd.<br>Secure Your <span class="gradient-text">Dream Offer.</span></h1>
+            <p class="hero-subtitle">
+              Stop drowning in endless resources. Prepare with structured roadmaps, hand-picked problems, custom-generated cheatsheets, and company-specific resources.
+            </p>
+            <div class="hero-ctas">
+              <a href="#domains" class="btn btn-primary">Explore Study Plans</a>
+              <a href="#projects" class="btn btn-secondary">Projects Lab</a>
+            </div>
+            <div class="focus-badges">
+              <span class="focus-badge dsa"><span class="badge-dot"></span> DSA</span>
+              <span class="focus-badge webdev"><span class="badge-dot"></span> Web Dev</span>
+              <span class="focus-badge aiml"><span class="badge-dot"></span> AI Certs</span>
+              <span class="focus-badge hackathon"><span class="badge-dot"></span> Hackathons</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Focus Domains Toggle / Content -->
+        <section id="domains" class="domains-section">
+          <div class="section-header">
+            <h2 class="section-title">Preparation Domains</h2>
+            <p class="section-desc">Select your target field to unlock premium roadmaps and resources.</p>
+          </div>
+          <div class="tabs-container">
+            <button class="tab-btn active" data-tab="dsa-content">DSA &amp; Algorithms</button>
+            <button class="tab-btn" data-tab="webdev-content">Web Development</button>
+            <button class="tab-btn" data-tab="ai-certs-content">AI Certifications</button>
+            <button class="tab-btn" data-tab="hackathon-guide-content">Hackathon Guide</button>
+          </div>
+
+          <div class="tab-panels">
+            <!-- DSA Panel -->
+            <div class="tab-panel active" id="dsa-content">
+              <div class="grid-layout cols-2">
+                <!-- 2 Months Card -->
+                <div class="glass-card premium-card roadmap-card" id="roadmap-sprint-card">
+                  <h3 class="card-title">2-Month Sprint Plan</h3>
+                  <p class="card-sub">High-speed accelerator focusing strictly on high-yield questions, core OA subjects, and immediate interview clearing.</p>
+                  <ul class="feature-list">
+                    <li><span class="check-icon">✓</span> 2-Month Structured DSA Roadmap</li>
+                    <li><span class="check-icon">✓</span> Custom-Generated Online Assessment (OA) Templates</li>
+                    <li><span class="check-icon">✓</span> Core CS Concepts Summary (OS, DBMS)</li>
+                    <li><span class="check-icon">✓</span> High-Frequency Company Question Bank</li>
+                  </ul>
+                  <button class="btn btn-primary unlock-btn" data-item-id="roadmap-sprint" data-name="2-Month Sprint Roadmap">
+                    Access Plan
+                  </button>
+
+                  <!-- Unlocked contents for DSA 2-Month -->
+                  <div class="unlocked-roadmap-content hidden" id="dsa-sprint-unlocked-content">
+                    <div class="unlocked-header">
+                      <span class="unlocked-badge">Unlocked ✓</span>
+                      <h4>2-Month Sprint Material</h4>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="roadmap-progress-wrapper">
+                      <div class="roadmap-progress-label">Syllabus Progress: <span class="roadmap-progress-pct" id="dsa-sprint-progress-pct">0%</span></div>
+                      <div class="progress-bar-track">
+                        <div class="progress-bar-fill" id="dsa-sprint-progress-fill" style="width: 0%;"></div>
+                      </div>
+                    </div>
+
+                    <!-- Tabs inside Unlocked content -->
+                    <div class="roadmap-inner-tabs">
+                      <button class="inner-tab-btn active" data-inner-tab="dsa-sprint-checklist">Checklist</button>
+                      <button class="inner-tab-btn" data-inner-tab="dsa-sprint-oa">OA Templates</button>
+                      <button class="inner-tab-btn" data-inner-tab="dsa-sprint-cs">Core CS</button>
+                      <button class="inner-tab-btn" data-inner-tab="dsa-sprint-qbank">Company Q-Bank</button>
+                    </div>
+
+                    <div class="inner-tab-panels">
+                      <!-- Checklist panel -->
+                      <div class="inner-tab-panel active" id="dsa-sprint-checklist">
+                        <div class="checklist-container scrollable-y">
+                          <div class="checklist-group">
+                            <h5>Week 1: Fundamentals &amp; Essential Math</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Complexity Analysis &amp; Estimations</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Basic Recursion &amp; Call Stacks</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Hashing (Collision Resolution)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Merge Sort &amp; Quick Sort implementation</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 2: Arrays &amp; Binary Search</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Two Pointers &amp; Sliding Window</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Kadane's Subarray Max Sum</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Binary Search on Answer (Aggressive Cows, Book Allocation)</span>
+                            </label>
+                            <div class="topic-problems">
+                              <p>📝 <strong>Problems to Solve:</strong></p>
+                              <ul>
+                                <li>Aggressive Cows (Spoj)</li>
+                                <li>Book Allocation Problem (GFG)</li>
+                                <li>LeetCode 1011. Capacity To Ship Packages Within D Days</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 3: Linked Lists, Stacks &amp; Queues</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Singly &amp; Doubly Linked Lists basics</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Stack &amp; Queue from scratch</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Monotonic Stack (Next Greater Element)</span>
+                            </label>
+                            <div class="topic-problems">
+                              <p>📝 <strong>Problems to Solve:</strong></p>
+                              <ul>
+                                <li>LeetCode 496. Next Greater Element I</li>
+                                <li>LeetCode 84. Largest Rectangle in Histogram</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 4: Trees (Binary Trees &amp; BSTs)</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">DFS / BFS Traversals</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Height, Diameter &amp; Lowest Common Ancestor (LCA)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">BST Insert, Delete, and Validation</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 5: Graphs &amp; Bit Manipulation</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Cycle Detection &amp; Topological Sort</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Dijkstra's Shortest Path Algorithm</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Disjoint Set Union (DSU)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Bitwise AND, OR, XOR operations</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 6: Dynamic Programming (DP)</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">1D DP (Fibonacci, Climbing Stairs)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">2D Grid DP &amp; 0/1 Knapsack variants</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">LCS (Longest Common Subsequence) &amp; Edit Distance</span>
+                            </label>
+                            <div class="topic-problems">
+                              <p>📝 <strong>Problems to Solve:</strong></p>
+                              <ul>
+                                <li>LeetCode 1143. Longest Common Subsequence</li>
+                                <li>LeetCode 72. Edit Distance</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 7: Tries, Heaps &amp; String Matching</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Trie Implementations (Search bar simulation)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Min/Max Heaps &amp; K-way Merge</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">KMP Algorithm (String Search)</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 8: Mock Tests &amp; Core CS Revision</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Complete 5 timed online assessments</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-sprint">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Review DBMS, Operating Systems, &amp; OOPs</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- OA Templates Panel -->
+                      <div class="inner-tab-panel" id="dsa-sprint-oa">
+                        <div class="panel-notes scrollable-y">
+                          <div style="display: flex; justify-content: space-between; align-items: center; margin-block-end: 1rem;">
+                            <h5>🚀 Custom OA Template Code Boilerplates</h5>
+                            <a href="/pdf/oa_templates.pdf" download class="btn btn-accent btn-sm">📥 Download Detailed PDF Guide</a>
+                          </div>
+                          <p><em>Hello student! Let's talk about the clock. In coding tests, your primary enemy is time. C++ standard streams (cin/cout) synchronization can slow down your runtimes. To fix this, always use fast I/O optimizations as shown below. Let's study these boilerplates together.</em></p>
+                          <h6>C++ Competitive Programming Template</h6>
+                          <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+#define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL);
+typedef long long ll;
+typedef vector&lt;int&gt; vi;
+
+void solve() {
+    // Write code here
+}
+
+int main() {
+    fast_io;
+    int t = 1;
+    cin &gt;&gt; t;
+    while(t--) {
+        solve();
+    }
+    return 0;
+}</code></pre>
+                          <h6>Python Binary Search Template</h6>
+                          <pre><code>def binary_search_on_answer(low, high, condition_check):
+    ans = -1
+    while low &lt;= high:
+        mid = low + (high - low) // 2
+        if condition_check(mid):
+            ans = mid
+            # Try to optimize further depending on min/max
+            high = mid - 1
+        else:
+            low = mid + 1
+    return ans</code></pre>
+                        </div>
+                      </div>
+
+                      <!-- Core CS Panel -->
+                      <div class="inner-tab-panel" id="dsa-sprint-cs">
+                        <div class="panel-notes scrollable-y">
+                          <div style="display: flex; justify-content: space-between; align-items: center; margin-block-end: 1rem;">
+                            <h5>🖥️ Core CS Concepts Summary (OS &amp; DBMS)</h5>
+                            <a href="/pdf/core_cs.pdf" download class="btn btn-accent btn-sm">📥 Download Detailed PDF Guide</a>
+                          </div>
+                          
+                          <p><em>Welcome to the OS &amp; DBMS tutorial block! Let's break down the complex terms into simple lessons as if we are studying in a classroom. Let's dive in.</em></p>
+                          
+                          <h6>Operating Systems (OS)</h6>
+                          <ul>
+                            <li><strong>Process vs Thread:</strong> <em>Imagine a Process as an independent factory building with its own workspace, and Threads as the individual workers sharing that same space. Since workers share the floor, they can talk instantly, but they might crash into each other (race conditions) without proper coordination (locks).</em></li>
+                            <li><strong>CPU Scheduling:</strong> <em>The scheduler acts as a gatekeeper. FIFO handles processes in order. SJF handles the shortest task first (optimal, but requires predicting the future!). Round Robin gives everyone a small time slice (time quantum) in turns.</em></li>
+                            <li><strong>Deadlocks:</strong> <em>This is like two cars meeting head-on on a one-lane bridge; neither can move forward or backward. Remember the four conditions: Mutual Exclusion, Hold &amp; Wait, No Preemption, and Circular Wait.</em></li>
+                            <li><strong>Virtual Memory:</strong> <em>When your RAM is full, the OS borrows space from the hard drive (Paging). Thrashing occurs when the OS spends all its time swapping pages in/out of storage instead of actually running your program!</em></li>
+                          </ul>
+
+                          <h6>Database Management Systems (DBMS)</h6>
+                          <ul>
+                            <li><strong>SQL Joins:</strong>
+                              <ul>
+                                <li><em>Inner Join:</em> Matches rows present in both tables.</li>
+                                <li><em>Left Join:</em> All rows from left table + matched rows from right.</li>
+                                <li><em>Right Join:</em> All rows from right table + matched rows from left.</li>
+                                <li><em>Full Join:</em> All rows when there is a match in either table.</li>
+                              </ul>
+                            </li>
+                            <li><strong>ACID Properties:</strong> <em>Think of ACID as the database safety net: Atomicity (all or nothing changes), Consistency (no broken rules), Isolation (independent runs), and Durability (saved changes remain even if the power cuts!).</em></li>
+                            <li><strong>Indexing:</strong> <em>An index is like the index at the back of a textbook. It lets you find topics (rows) instantly, but writing new pages (inserts/updates) takes slightly longer because you have to update the index list too.</em></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!-- Company Q-Bank Panel -->
+                      <div class="inner-tab-panel" id="dsa-sprint-qbank">
+                        <div class="panel-notes scrollable-y">
+                          <h5>🏢 High-Frequency Company Questions</h5>
+                          
+                          <h6>Google top asked questions:</h6>
+                          <ul>
+                            <li><strong>1. Count Subarrays with Median K:</strong> Graph-based or prefix sum matching. Uses subarrays manipulations.</li>
+                            <li><strong>2. Longest Path in a Graph with constraints:</strong> Tree traversal DFS with memoization or Topological sort.</li>
+                            <li><strong>3. Dynamic Programming on Trees:</strong> (e.g. Tree Distances, Tree diameter).</li>
+                          </ul>
+
+                          <h6>Microsoft top asked questions:</h6>
+                          <ul>
+                            <li><strong>1. Next Greater Element:</strong> Solved in O(N) using Monotonic Stacks.</li>
+                            <li><strong>2. Meeting Rooms II:</strong> Priority queues / sorting interval starts and ends.</li>
+                            <li><strong>3. LRU Cache:</strong> Hash map combined with a doubly linked list for O(1) actions.</li>
+                          </ul>
+
+                          <h6>Amazon top asked questions:</h6>
+                          <ul>
+                            <li><strong>1. Word Search II:</strong> DFS graph search starting at character cells using a Trie.</li>
+                            <li><strong>2. Merge K Sorted Lists:</strong> Solve efficiently using min-heaps.</li>
+                            <li><strong>3. Rotting Oranges:</strong> Graph traversal BFS tracking shortest elapsed time.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6-8 Months Card -->
+                <div class="glass-card premium-card roadmap-card featured" id="roadmap-mastery-card">
+                  <div class="pricing-badge featured-badge">Recommended</div>
+                  <h3 class="card-title">6-8 Month Mastery Plan</h3>
+                  <p class="card-sub">Complete full-stack path containing comprehensive concept learning, deep practice, system design, and large portfolios.</p>
+                  <ul class="feature-list">
+                    <li><span class="check-icon">✓</span> 8-Month In-depth DSA Curriculum</li>
+                    <li><span class="check-icon">✓</span> 250+ Hand-picked Practice Track</li>
+                    <li><span class="check-icon">✓</span> Complete Low-Level &amp; High-Level Design Modules</li>
+                    <li><span class="check-icon">✓</span> Custom-Generated CS Core Notes &amp; OA Libraries</li>
+                  </ul>
+                  <button class="btn btn-accent unlock-btn" data-item-id="roadmap-mastery" data-name="6-8 Month Mastery Roadmap">
+                    Access Plan
+                  </button>
+
+                  <!-- Unlocked contents for DSA 6-8 Month -->
+                  <div class="unlocked-roadmap-content hidden" id="dsa-mastery-unlocked-content">
+                    <div class="unlocked-header">
+                      <span class="unlocked-badge">Unlocked ✓</span>
+                      <h4>6-8 Month Mastery material</h4>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="roadmap-progress-wrapper">
+                      <div class="roadmap-progress-label">Syllabus Progress: <span class="roadmap-progress-pct" id="dsa-mastery-progress-pct">0%</span></div>
+                      <div class="progress-bar-track">
+                        <div class="progress-bar-fill" id="dsa-mastery-progress-fill" style="width: 0%;"></div>
+                      </div>
+                    </div>
+
+                    <!-- Tabs inside Unlocked content -->
+                    <div class="roadmap-inner-tabs">
+                      <button class="inner-tab-btn active" data-inner-tab="dsa-mastery-checklist">Checklist</button>
+                      <button class="inner-tab-btn" data-inner-tab="dsa-mastery-design">System Design</button>
+                      <button class="inner-tab-btn" data-inner-tab="dsa-mastery-tracker">Performance Tracker</button>
+                    </div>
+
+                    <div class="inner-tab-panels">
+                      <!-- Checklist panel -->
+                      <div class="inner-tab-panel active" id="dsa-mastery-checklist">
+                        <div class="checklist-container scrollable-y">
+                          <div class="checklist-group">
+                            <h5>Months 1–2: Language &amp; Linear Structures</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Master Language (C++ STL or Java Collections Framework)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Analysis of Space-Time complexity</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Complete 50+ Easy/Medium Array &amp; String questions</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Hashing principles &amp; direct lookups</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Months 3–4: Advanced Pointers, Recursion &amp; Trees</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Linked Lists (Singly, Doubly, Circular)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Recursion &amp; Backtracking (Subsets, Permutations, N-Queens)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Stacks, Queues, &amp; Monotonic stack patterns</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Binary Trees and BST traversal operations</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Month 5: Greedy, Binary Search on Answer &amp; Graphs</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Greedy algorithms heuristics</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Advanced BS on Answer (Aggressive Cows, Split Array)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Graph traversals (BFS, DFS) &amp; topological sort</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Dijkstra's shortest path implementation</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Month 6: Dynamic Programming, Tries &amp; Heaps</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Dynamic Programming (1D, 2D Grid, Knapsack, LCS)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Min/Max Heaps &amp; Priority queues</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Trie insert, search, and prefix matching</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Month 7: CS Core Fundamentals &amp; SQL Database</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Object-Oriented Programming (OOPs principles, Access modifiers)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Operating Systems scheduling &amp; deadlocks</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">DBMS SQL queries (joins, indexing, ACID properties)</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Month 8: Company specific Grinding &amp; Mock Tests</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Run virtual contests on LeetCode</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="dsa-mastery">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Filter questions by target companies (MS, Google, Amazon)</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- System Design Panel -->
+                      <div class="inner-tab-panel" id="dsa-mastery-design">
+                        <div class="panel-notes scrollable-y">
+                          <div style="display: flex; justify-content: space-between; align-items: center; margin-block-end: 1rem;">
+                            <h5>🏛️ High-Level &amp; Low-Level Design Basics</h5>
+                            <a href="/pdf/system_design.pdf" download class="btn btn-accent btn-sm">📥 Download Detailed PDF Guide</a>
+                          </div>
+                          
+                          <p><em>Welcome class! System design is where we transition from 'writing code' to 'building architectures'. Let's explore how we scale systems to handle millions of students.</em></p>
+                          
+                          <h6>High-Level Design (HLD)</h6>
+                          <ul>
+                            <li><strong>Horizontal vs Vertical Scaling:</strong> <em>Think of Vertical Scaling as buying a bigger, faster truck (more RAM/CPU) to carry packages. It works up to a limit, but if the truck breaks down, everything stops! Horizontal Scaling is like hiring a fleet of 50 smaller delivery vans. If one breaks down, the others carry the load.</em></li>
+                            <li><strong>Load Balancers:</strong> <em>The dispatcher of your fleet. It takes incoming customer orders (traffic) and assigns them to active vans (servers) so no single driver gets overwhelmed.</em></li>
+                            <li><strong>Caching:</strong> <em>Like keeping your favorite books on your desk instead of walking to the public library every time you need to read a page. We store hot database records in memory (Redis) to return them in milliseconds.</em></li>
+                            <li><strong>API Gateway:</strong> <em>A security guard at the front gate. It checks guest IDs, limits how many people enter per minute (rate limiting), and routes them to the correct building (microservices).</em></li>
+                          </ul>
+
+                          <h6>Low-Level Design (LLD)</h6>
+                          <ul>
+                            <li><strong>SOLID Principles:</strong> <em>A blueprint for clean code:
+                              <ul>
+                                <li>Single Responsibility: One tool, one job (a hammer only hits nails).</li>
+                                <li>Open/Closed: Plug-in modules (add features by adding new modules, don't re-wire the base system!).</li>
+                                <li>Liskov Substitution: Child components must fit perfectly where parent components go.</li>
+                                <li>Interface Segregation: Smaller custom panels (don't force a user to use a remote control with 100 unused buttons!).</li>
+                                <li>Dependency Inversion: Plug into sockets (your lamp depends on the electrical outlet abstraction, not the concrete power grid!).</li>
+                              </ul></em>
+                            </li>
+                            <li><strong>Common Design Patterns:</strong> <em>Singleton (only one database connection manager), Factory (a factory that manufactures different types of payment cards), Observer (subscribers getting newsletters automatically when published).</em></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!-- Tracker Panel -->
+                      <div class="inner-tab-panel" id="dsa-mastery-tracker">
+                        <div class="panel-notes scrollable-y">
+                          <h5>🎯 Performance Targets &amp; strict Rules</h5>
+                          <table class="data-table">
+                            <thead>
+                              <tr>
+                                <th>Platform</th>
+                                <th>Target Metric</th>
+                                <th>Purpose</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>LeetCode</td>
+                                <td>450+ Solved (~100 Easy, ~300 Med, ~50 Hard)</td>
+                                <td>Standard interview pattern recognition</td>
+                              </tr>
+                              <tr>
+                                <td>Codeforces</td>
+                                <td>~1200 - 1300 Rating (Pupil)</td>
+                                <td>Speed under intense pressure</td>
+                              </tr>
+                              <tr>
+                                <td>Contests</td>
+                                <td>25+ Live Contests</td>
+                                <td>Mocking Online Assessments</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h6 style="margin-block-start: 1rem;">🛠️ strict Operational Rules:</h6>
+                          <ul>
+                            <li><strong>The 45-Minute Bound:</strong> Spend 45 minutes trying to solve before checking solutions.</li>
+                            <li><strong>Upsolve Without Exception:</strong> If you miss problem C in a contest, code it the next day.</li>
+                            <li><strong>Weekly Code Review:</strong> Re-code 3 previously solved problems every Sunday from memory.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- WebDev Panel -->
+            <div class="tab-panel" id="webdev-content">
+              <div class="grid-layout cols-1">
+                <!-- Web Dev 2 Months Card -->
+                <div class="glass-card premium-card roadmap-card" id="roadmap-webdev-card" style="width: 100%; max-width: 800px; margin: 0 auto; min-width: 0;">
+                  <h3 class="card-title">2-Month Web Development Plan</h3>
+                  <p class="card-sub">Accelerate your portfolio. Master advanced JavaScript, React architecture, Node servers, databases, and capstone deployments.</p>
+                  <ul class="feature-list">
+                    <li><span class="check-icon">✓</span> 2-Month Web Dev Weekly Checklist</li>
+                    <li><span class="check-icon">✓</span> Custom-Generated HTML, CSS, JS Cheatsheets</li>
+                    <li><span class="check-icon">✓</span> Complete MERN Stack blueprints</li>
+                    <li><span class="check-icon">✓</span> Web Dev Tutorials Playlist integration</li>
+                  </ul>
+                  <button class="btn btn-primary unlock-btn" data-item-id="roadmap-webdev" data-name="2-Month Web Dev Roadmap">
+                    Access Plan
+                  </button>
+
+                  <!-- Unlocked Web Dev Content -->
+                  <div class="unlocked-roadmap-content hidden" id="webdev-unlocked-content">
+                    <div class="unlocked-header">
+                      <span class="unlocked-badge">Unlocked ✓</span>
+                      <h4>2-Month Web Dev Material</h4>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="roadmap-progress-wrapper">
+                      <div class="roadmap-progress-label">Syllabus Progress: <span class="roadmap-progress-pct" id="roadmap-webdev-progress-pct">0%</span></div>
+                      <div class="progress-bar-track">
+                        <div class="progress-bar-fill" id="roadmap-webdev-progress-fill" style="width: 0%;"></div>
+                      </div>
+                    </div>
+
+                    <!-- Tabs inside Unlocked content -->
+                    <div class="roadmap-inner-tabs">
+                      <button class="inner-tab-btn active" data-inner-tab="webdev-checklist">Checklist</button>
+                      <button class="inner-tab-btn" data-inner-tab="webdev-html">HTML Cheatsheet</button>
+                      <button class="inner-tab-btn" data-inner-tab="webdev-css">CSS Cheatsheet</button>
+                      <button class="inner-tab-btn" data-inner-tab="webdev-js">JS Cheatsheet</button>
+                      <button class="inner-tab-btn" data-inner-tab="webdev-mongodb">MongoDB</button>
+                      <button class="inner-tab-btn" data-inner-tab="webdev-django">Django</button>
+                      <button class="inner-tab-btn" data-inner-tab="webdev-mysql">MySQL</button>
+                    </div>
+
+                    <div class="inner-tab-panels">
+                      <!-- Checklist panel -->
+                      <div class="inner-tab-panel active" id="webdev-checklist">
+                        <div class="checklist-container scrollable-y">
+                          <div class="topic-problems" style="margin-block-end: 1rem;">
+                            <p>🎥 <strong>Official Web-Dev Tutorials Playlist:</strong></p>
+                            <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-block;">CodeWithHarry Web Dev Playlist ↗</a>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 1: Advanced JavaScript</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Execution Context, Call Stack &amp; Event Loop</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Closures, Prototypes &amp; "this" keyword</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Asynchronous JS (Promises, Async/Await, API fetch)</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Weeks 2–3: React.js (Frontend Mastery)</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Virtual DOM, JSX, props vs state</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Hooks: useState, useEffect, useRef, and custom hooks</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">React Router (v6) &amp; Context API global state</span>
+                            </label>
+                            <div class="topic-problems">
+                              <p>🗣️ <strong>Interview Q&amp;A:</strong></p>
+                              <ul>
+                                <li><strong>Q: What triggers a re-render in React?</strong> A: A change in component state, parent props, or Context API global values.</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Weeks 4–5: Node.js &amp; Express.js (Backend)</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Node Single-threaded Event Loop architecture</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Express routing, requests, and middlewares</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Write APIs and document on Postman Collections</span>
+                            </label>
+                            <div class="topic-problems">
+                              <p>🗣️ <strong>Interview Q&amp;A:</strong></p>
+                              <ul>
+                                <li><strong>Q: Difference between PUT vs PATCH?</strong> A: PUT replaces the entire resource; PATCH applies partial updates to fields.</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 6: Databases (MongoDB &amp; Mongoose)</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">SQL vs NoSQL trade-offs (scalability vs relations)</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Mongoose schemas, validations, and collections referencing</span>
+                            </label>
+                            <div class="topic-problems">
+                              <p>🗣️ <strong>Interview Q&amp;A:</strong></p>
+                              <ul>
+                                <li><strong>Q: What is database indexing?</strong> A: A data structure that increases query read speeds at the expense of extra storage and slower write overhead.</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 7: Full Stack Integration</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">JWT login session with HTTP-only cookies</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Deploy Frontend (Vercel) &amp; Backend (Render/AWS)</span>
+                            </label>
+                          </div>
+
+                          <div class="checklist-group">
+                            <h5>Week 8: Performance &amp; System Design</h5>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">Lazy loading components, debouncing, &amp; throttling</span>
+                            </label>
+                            <label class="checkbox-container">
+                              <input type="checkbox" class="roadmap-checkbox" data-roadmap="roadmap-webdev">
+                              <span class="checkmark"></span>
+                              <span class="checkbox-text">In-memory caching with Redis</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- HTML Cheatsheet Panel -->
+                      <div class="inner-tab-panel" id="webdev-html">
+                        <div class="panel-notes scrollable-y">
+                          <div style="display: flex; justify-content: space-between; align-items: center; margin-block-end: 1rem;">
+                            <h5>📄 HTML Cheatsheet</h5>
+                            <a href="/pdf/html.pdf" download class="btn btn-accent btn-sm">📥 Download PDF Cheatsheet</a>
+                          </div>
+                          <h6>HTML5 Boilerplate</h6>
+                          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Content here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                          <h6>Headings &amp; semantic Containers</h6>
+                          <ul>
+                            <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>: Heading levels.</li>
+                            <li><code>&lt;div&gt;</code> (block container), <code>&lt;span&gt;</code> (inline container).</li>
+                            <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>: Semantic tags.</li>
+                          </ul>
+                          <h6>Forms &amp; Inputs</h6>
+                          <ul>
+                            <li><code>&lt;input type="text"&gt;</code>, <code>type="password"</code>, <code>type="email"</code>, <code>type="checkbox"</code>, <code>type="radio"</code></li>
+                            <li><code>&lt;select&gt;</code> / <code>&lt;option&gt;</code>: Dropdown selectors.</li>
+                            <li><code>&lt;textarea&gt;</code>: Multi-line text boxes.</li>
+                            <li><code>&lt;button type="submit"&gt;</code>: Action triggers.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!-- CSS Cheatsheet Panel -->
+                      <div class="inner-tab-panel" id="webdev-css">
+                        <div class="panel-notes scrollable-y">
+                          <div style="display: flex; justify-content: space-between; align-items: center; margin-block-end: 1rem;">
+                            <h5>🎨 CSS Cheatsheet</h5>
+                            <a href="/pdf/css.pdf" download class="btn btn-accent btn-sm">📥 Download PDF Cheatsheet</a>
+                          </div>
+                          <h6>Fonts &amp; Text properties</h6>
+                          <ul>
+                            <li><code>font-family: 'Inter', sans-serif;</code></li>
+                            <li><code>font-size: 1rem;</code> (responsive with html base).</li>
+                            <li><code>font-weight: bold;</code> (or 100-900).</li>
+                            <li><code>line-height: 1.5;</code> (vertical spacing).</li>
+                            <li><code>letter-spacing: 0.15em;</code></li>
+                          </ul>
+                          <h6>Box Model &amp; display</h6>
+                          <ul>
+                            <li><code>box-sizing: border-box;</code> (includes padding/border in calculations).</li>
+                            <li><code>margin: 10px 20px;</code>, <code>padding: 5px 10px;</code></li>
+                            <li><code>overflow: hidden / auto / scroll;</code></li>
+                            <li><code>aspect-ratio: 16/9;</code></li>
+                          </ul>
+                          <h6>Flexbox Layout</h6>
+                          <pre><code>.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.item {
+    flex: 1;
+}</code></pre>
+                          <h6>CSS Grid Layout</h6>
+                          <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}</code></pre>
+                          <h6>Modern features</h6>
+                          <ul>
+                            <li><code>backdrop-filter: blur(10px);</code> (glassmorphism filter).</li>
+                            <li><code>font-size: clamp(1rem, 2vw, 1.5rem);</code></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!-- JS Cheatsheet Panel -->
+                      <div class="inner-tab-panel" id="webdev-js">
+                        <div class="panel-notes scrollable-y">
+                          <div style="display: flex; justify-content: space-between; align-items: center; margin-block-end: 1rem;">
+                            <h5>⚡ JavaScript Cheatsheet</h5>
+                            <a href="/pdf/javascript.pdf" download class="btn btn-accent btn-sm">📥 Download PDF Cheatsheet</a>
+                          </div>
+                          <h6>Variables &amp; functions</h6>
+                          <ul>
+                            <li><code>let name = "Harry";</code> (block scope, reassignable).</li>
+                            <li><code>const PI = 3.14;</code> (block scope, immutable).</li>
+                            <li><code>const greet = (name) => `Hello, ${name}`;</code></li>
+                          </ul>
+                          <h6>DOM manipulations</h6>
+                          <ul>
+                            <li><code>document.querySelector('#id');</code></li>
+                            <li><code>document.querySelectorAll('.class');</code></li>
+                            <li><code>document.getElementById('element').textContent = "New text";</code></li>
+                          </ul>
+                          <h6>Arrays methods</h6>
+                          <pre><code>const arr = [1, 2, 3];
+arr.push(4); // Add to end
+const doubled = arr.map(num => num * 2); // [2, 4, 6, 8]
+const filtered = arr.filter(num => num > 2); // [3, 4]
+const sum = arr.reduce((acc, cur) => acc + cur, 0); // 10</code></pre>
+                          <h6>Async JavaScript (Promises &amp; Await)</h6>
+                          <pre><code>async function fetchData() {
+    try {
+        const res = await fetch('https://api.example.com');
+        const data = await res.json();
+        console.log(data);
+    } catch(err) {
+        console.error(err);
+    }
+}</code></pre>
+                        </div>
+                      </div>
+
+                      <!-- MongoDB Cheatsheet Panel -->
+                      <div class="inner-tab-panel" id="webdev-mongodb">
+                        <div class="panel-notes scrollable-y">
+                          <div style="display: flex; justify-content: space-between; align-items: center; margin-block-end: 1rem;">
+                            <h5>🍃 MongoDB Cheatsheet</h5>
+                            <a href="/pdf/mongodb.pdf" download class="btn btn-accent btn-sm">📥 Download PDF Cheatsheet</a>
+                          </div>
+                          <h6>1. Database Commands</h6>
+                          <pre><code>show dbs               // View all databases
+use dbName             // Create or switch database
+db                     // View current database
+db.dropDatabase()      // Delete current database</code></pre>
+                          
+                          <h6>2. Collection Commands</h6>
+                          <pre><code>show collections       // Show collections
+db.createCollection('comments')  // Create collection
+db.comments.drop()     // Drop collection</code></pre>
+
+                          <h6>3. Document Operations (CRUD)</h6>
+                          <pre><code>db.comments.find()     // Find all documents
+db.comments.find().pretty() // Find all with pretty spacing
+db.comments.findOne({name: 'Harry'}) // Find matching item
+db.comments.insertOne({
+  name: 'Harry',
+  lang: 'JavaScript',
+  member_since: 5
+})
+db.comments.insertMany([
+  {name: 'Harry', lang: 'JavaScript', member_since: 5},
+  {name: 'Rohan', lang: 'Python', member_since: 3}
+])</code></pre>
+
+                          <h6>4. Query Operators</h6>
+                          <pre><code>db.comments.find({member_since: {$lt: 90}})  // Less than
+db.comments.find({member_since: {$gte: 90}}) // Greater than or equal
+db.comments.find({$or: [{lang: 'Python'}, {lang: 'Java'}]}) // Logical OR
+db.comments.find({lang: {$in: ['Python', 'Java']}}) // In array</code></pre>
+
+                          <h6>5. Indexes &amp; Aggregations</h6>
+                          <pre><code>db.comments.createIndex({name: 1}) // Create index
+db.comments.aggregate([
+  {$group: {_id: "$lang", total: {$sum: 1}}} // Count grouped by field
+])</code></pre>
+                        </div>
+                      </div>
+
+                      <!-- Django Cheatsheet Panel -->
+                      <div class="inner-tab-panel" id="webdev-django">
+                        <div class="panel-notes scrollable-y">
+                          <div style="display: flex; justify-content: space-between; align-items: center; margin-block-end: 1rem;">
+                            <h5>🦄 Django Cheatsheet</h5>
+                            <a href="/pdf/django.pdf" download class="btn btn-accent btn-sm">📥 Download PDF Cheatsheet</a>
+                          </div>
+                          <h6>1. Project Setup &amp; Installation</h6>
+                          <pre><code>pip install django                      // Install Django
+django-admin --version                  // Check version
+django-admin startproject projectName   // Create project
+cd projectName
+python manage.py runserver              // Start local server
+python manage.py startapp appName       // Create app module</code></pre>
+
+                          <h6>2. Django MVT (Model definition)</h6>
+                          <pre><code>from django.db import models
+
+class Product(models.Model):
+    product_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    price = models.FloatField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name</code></pre>
+
+                          <h6>3. URL Routing &amp; Views</h6>
+                          <pre><code># views.py
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+    return render(request, "index.html", {"name": "Harry"})
+
+# urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]</code></pre>
+
+                          <h6>4. Database Migrations</h6>
+                          <pre><code>python manage.py makemigrations // Generate database blueprints
+python manage.py migrate        // Run actual migrations
+python manage.py shell          // Open interactive Django shell</code></pre>
+                        </div>
+                      </div>
+
+                      <!-- MySQL Cheatsheet Panel -->
+                      <div class="inner-tab-panel" id="webdev-mysql">
+                        <div class="panel-notes scrollable-y">
+                          <div style="display: flex; justify-content: space-between; align-items: center; margin-block-end: 1rem;">
+                            <h5>🐬 MySQL Cheatsheet</h5>
+                            <a href="/pdf/mysql.pdf" download class="btn btn-accent btn-sm">📥 Download PDF Cheatsheet</a>
+                          </div>
+                          <h6>1. Database Access &amp; Tables</h6>
+                          <pre><code>SHOW DATABASES;             -- List all databases
+USE database_name;          -- Switch active DB
+SHOW TABLES;                -- List tables
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT DEFAULT 18
+);</code></pre>
+
+                          <h6>2. Query operations (CRUD)</h6>
+                          <pre><code>INSERT INTO users (name, age) VALUES ('Harry', 21);
+SELECT * FROM users WHERE age &gt; 18;
+SELECT * FROM users WHERE name LIKE 'Ha%'; -- Pattern search
+UPDATE users SET age = 22 WHERE id = 1;
+DELETE FROM users WHERE id = 1;</code></pre>
+
+                          <h6>3. SQL Joins</h6>
+                          <pre><code>-- Inner Join
+SELECT u.name, o.id FROM users u INNER JOIN orders o ON u.id = o.user_id;
+
+-- Left Join
+SELECT u.name, o.id FROM users u LEFT JOIN orders o ON u.id = o.user_id;</code></pre>
+
+                          <h6>4. Indexes &amp; Transactions</h6>
+                          <pre><code>CREATE INDEX idx_name ON users(name); -- Create search index
+
+START TRANSACTION;
+UPDATE accounts SET balance = balance - 500 WHERE id = 1;
+UPDATE accounts SET balance = balance + 500 WHERE id = 2;
+COMMIT; -- Commit transaction changes (or ROLLBACK on failure)</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Certifications Panel -->
+            <div class="tab-panel" id="ai-certs-content">
+              <div class="grid-layout cols-1">
+                <!-- Free AI Certifications Card -->
+                <div class="glass-card premium-card roadmap-card" id="aiml-certs-card" style="width: 100%; max-width: 800px; margin: 0 auto; min-width: 0;">
+                  <div class="pricing-badge">Teaser Free</div>
+                  <h3 class="card-title">AI Certifications Directory</h3>
+                  <p class="card-sub">Curated free certificate courses from Microsoft, Google, AWS, IBM, and Oracle to build credentials on your resume.</p>
+                  
+                  <div class="free-courses-summary" style="margin-block: 1rem;">
+                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-block-end: 0.5rem;">🔥 <strong>Free to Access Picks:</strong></div>
+                    <ul class="feature-list" style="margin-block-end: 0;">
+                      <li><a href="https://elementsofai.com" target="_blank" style="color: var(--color-teal); text-decoration: underline;">Elements of AI (Helsinki) ↗</a></li>
+                      <li><a href="https://linkedin.com/learning/paths/career-essentials-in-generative-ai-by-microsoft-and-linkedin" target="_blank" style="color: var(--color-teal); text-decoration: underline;">GenAI Career Essentials (Microsoft) ↗</a></li>
+                    </ul>
+                  </div>
+
+                  <button class="btn btn-primary unlock-btn" data-item-id="courses-directory" data-name="Full AI Courses Directory (20 Courses)">
+                    Access Directory (Free)
+                  </button>
+
+                  <!-- Unlocked Full Directory -->
+                  <div class="unlocked-roadmap-content hidden" id="aiml-certs-unlocked-content">
+                    <div class="unlocked-header">
+                      <span class="unlocked-badge">Unlocked ✓</span>
+                      <h4>20 Curated AI Courses</h4>
+                    </div>
+                    
+                    <div class="courses-directory-content scrollable-y" style="max-height: 400px; display: block; filter: none;">
+                      <!-- Beginner -->
+                      <h5 style="color: hsl(142, 70%, 65%); margin-block: 1rem 0.5rem;">Beginner courses:</h5>
+                      <ul style="padding-inline-start: 1.25rem; font-size: 0.82rem; color: var(--text-muted);">
+                        <li><strong>AI for Beginners (HP LIFE):</strong> <a href="https://life-global.org/course/391-ai-for-beginners" target="_blank">Link ↗</a></li>
+                        <li><strong>AI for Business (HP LIFE):</strong> <a href="https://life-global.org/course/423-ai-for-business-professionals" target="_blank">Link ↗</a></li>
+                        <li><strong>Critical Thinking in AI Era (HP LIFE):</strong> <a href="https://life-global.org/course/439-critical-thinking-in-the-ai-era" target="_blank">Link ↗</a></li>
+                        <li><strong>AI Foundations (ISTE + IBM):</strong> <a href="https://skillsbuild.org/students/course-catalog/artificial-intelligence/ai-foundations-powered-by-iste-and-ibm" target="_blank">Link ↗</a></li>
+                        <li><strong>Introduction to Responsible AI (Google):</strong> <a href="https://skills.google/course_templates/554" target="_blank">Link ↗</a></li>
+                        <li><strong>AWS Intro to Generative AI (AWS):</strong> <a href="https://aws.amazon.com/education/awseducate" target="_blank">Link ↗</a></li>
+                      </ul>
+
+                      <!-- Intermediate -->
+                      <h5 style="color: hsl(45, 90%, 70%); margin-block: 1rem 0.5rem;">Intermediate courses:</h5>
+                      <ul style="padding-inline-start: 1.25rem; font-size: 0.82rem; color: var(--text-muted);">
+                        <li><strong>AI Fundamentals (IBM):</strong> <a href="https://skillsbuild.org/college-students/course-catalog/artificial-intelligence-fundamentals" target="_blank">Link ↗</a></li>
+                        <li><strong>Generative AI in Action (IBM):</strong> <a href="https://skillsbuild.org/college-students/course-catalog/generative-ai-in-action" target="_blank">Link ↗</a></li>
+                        <li><strong>Build watsonx Chatbots (IBM):</strong> <a href="https://skillsbuild.org/college-students/course-catalog/build-your-first-chatbot-using-ibm-watsonx" target="_blank">Link ↗</a></li>
+                        <li><strong>Intro to LLMs (Google):</strong> <a href="https://skills.google/course_templates/539" target="_blank">Link ↗</a></li>
+                        <li><strong>AWS ML Foundations (AWS):</strong> <a href="https://aws.amazon.com/education/awseducate" target="_blank">Link ↗</a></li>
+                      </ul>
+
+                      <!-- Advanced -->
+                      <h5 style="color: hsl(0, 80%, 70%); margin-block: 1rem 0.5rem;">Advanced courses:</h5>
+                      <ul style="padding-inline-start: 1.25rem; font-size: 0.82rem; color: var(--text-muted);">
+                        <li><strong>Transformers &amp; BERT (Google):</strong> <a href="https://skills.google/course_templates/538" target="_blank">Link ↗</a></li>
+                        <li><strong>OCI AI Foundations Associate (Oracle):</strong> <a href="https://learn.oracle.com/ols/learning-path/become-an-oci-ai-foundations-associate-2025/118071/147781" target="_blank">Link ↗</a></li>
+                        <li><strong>ML with Python (freeCodeCamp):</strong> <a href="https://freecodecamp.org/learn/machine-learning-with-python" target="_blank">Link ↗</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hackathon Guide Panel -->
+            <div class="tab-panel" id="hackathon-guide-content">
+              <div class="grid-layout cols-1">
+                <!-- Ultimate Hackathon Card -->
+                <div class="glass-card premium-card roadmap-card" id="hackathon-guide-card" style="width: 100%; max-width: 800px; margin: 0 auto; min-width: 0;">
+                  <div class="pricing-badge">Sponsor Special</div>
+                  <h3 class="card-title">Hackathon Winning Guide</h3>
+                  <p class="card-sub">A master blueprint covering pre-hackathon ideation, team structures, lightning builds, prompt engineering rules, and pitch rubrics.</p>
+                  <ul class="feature-list">
+                    <li><span class="check-icon">✓</span> Sponsor validation tactics &amp; API prep</li>
+                    <li><span class="check-icon">✓</span> Lightning-Fast Supabase + Cursor build flow</li>
+                    <li><span class="check-icon">✓</span> Rubric mapping &amp; 90-sec live demo loops</li>
+                    <li><span class="check-icon">✓</span> Prompt Engineering 101 directives</li>
+                  </ul>
+                  <button class="btn btn-primary unlock-btn" data-item-id="hackathon-guide" data-name="Ultimate Hackathon Winning Guide">
+                    Access Guide (Free)
+                  </button>
+
+                  <!-- Unlocked content for Hackathon -->
+                  <div class="unlocked-roadmap-content hidden" id="hackathon-unlocked-content">
+                    <div class="unlocked-header">
+                      <span class="unlocked-badge">Unlocked ✓</span>
+                      <h4>Ultimate Hackathon Guide</h4>
+                    </div>
+                    
+                    <div class="hackathon-guide-content scrollable-y">
+                      <h5>1. Pre-Hackathon Prep (48 – 24 hrs before)</h5>
+                      <ul>
+                        <li><strong>Choose track early:</strong> Rank event challenges by domain interest, sponsor influence, and judging criteria weight.</li>
+                        <li><strong>Brainstorm 2-3 solid ideas per track:</strong> Use ChatGPT / Perplexity to riff 20+ prompts, then converge on top 3 with problem -> solution -> impact statements.</li>
+                        <li><strong>Validate with sponsors:</strong> Pitch your shortlist at the booths. Build whichever concept excites the actual sponsor judge.</li>
+                        <li><strong>Read API docs:</strong> Bookmark endpoints, authentication flow codes, and quota limits.</li>
+                      </ul>
+
+                      <h5>2. Assemble a Balanced Team</h5>
+                      <ul>
+                        <li><strong>Product Lead/Pitcher:</strong> Idea refinement, rubric mapping, demo setup.</li>
+                        <li><strong>Frontend Dev:</strong> UI/UX design (Next.js + Tailwind + Vercel v0).</li>
+                        <li><strong>Backend/DevOps:</strong> API endpoints, DB schema, deployments (Supabase/Vercel).</li>
+                        <li><strong>ML/AI Wrapper:</strong> LLM prompt integration (OpenAI API / Gemini).</li>
+                      </ul>
+
+                      <h5>3. Lightning-Fast Build Workflow (0 – 12 hrs)</h5>
+                      <ol>
+                        <li><strong>Scaffold UI:</strong> Prompt v0, download resulting UI mockup as a zip file.</li>
+                        <li><strong>Let Cursor digest:</strong> Open folder in Cursor. Wait 5 minutes to let it index, then run queries.</li>
+                        <li><strong>Backend in one shot:</strong> Define DB schema in Supabase SQL editor. Ask Cursor to "Create Express routes for /signup, /login, /transactions using Supabase client".</li>
+                        <li><strong>Integrate Sponsor APIs:</strong> Keep to one flagship integration that demos well. Target MVP deployment in &le; 5 hours.</li>
+                      </ol>
+
+                      <h5>4. Leveraging AI (Prompt Engineering 101)</h5>
+                      <p>Prompt engineering is the craft of framing and refining the inputs you give an AI model to get precise, useful outputs.</p>
+                      <ul>
+                        <li>Assign a clear role ("You are an expert TypeScript engineer").</li>
+                        <li>State your goal ("Generate an Express route to fetch user data").</li>
+                        <li>Define desired output formats ("Return only valid code, no commentary").</li>
+                        <li>Use few-shot examples or chain-of-thought prompts.</li>
+                      </ul>
+
+                      <h5>5. Nail the Presentation (Last 2 hrs)</h5>
+                      <ul>
+                        <li><strong>Map slides to rubric:</strong> If Innovation counts for 30%, have a dedicated Innovation slide.</li>
+                        <li><strong>Hook the room:</strong> Open with a 15-second story or audience live poll.</li>
+                        <li><strong>Live Demo:</strong> Login -> Key Feature -> Wow moment (&le; 90 seconds). Have a backup pre-recorded Loom.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Lab -->
+        <section id="projects" class="projects-section">
+          <div class="section-header">
+            <h2 class="section-title">Projects Lab</h2>
+            <p class="section-desc">Create standout, resume-worthy projects that interviewers actually want to talk about.</p>
+          </div>
+          
+          <div class="grid-layout cols-1-2">
+            <!-- Free Project Card -->
+            <div class="glass-card project-card">
+              <div class="free-label">Free First Attempt</div>
+              <h3 class="project-title">AI Resume Reviewer</h3>
+              <p class="project-desc">Simulate a placement cell review. Enter your target job skills and resume text to analyze alignment, get matching scores, and optimization tips.</p>
+              
+              <div class="resume-reviewer-form">
+                <div class="form-group">
+                  <label for="skills-input">Target Job Role / Key Skills</label>
+                  <input type="text" id="skills-input" placeholder="e.g., React, Node.js, DSA, System Design" value="React, Node.js, Data Structures">
+                </div>
+                <div class="form-group">
+                  <label for="resume-input">Resume Text / Content</label>
+                  <textarea id="resume-input" rows="4" placeholder="Paste your resume content or skills here..."></textarea>
+                </div>
+                <button id="analyze-resume-btn" class="btn btn-secondary btn-full">Analyze Resume</button>
+              </div>
+
+              <!-- Output Analysis -->
+              <div id="resume-analysis-result" class="analysis-result-box hidden">
+                <h4 class="box-title">Resume Score: <span id="analysis-score" class="score-highlight">85%</span></h4>
+                <p class="score-comment">Great core match! Here are suggestions to improve:</p>
+                <ul class="analysis-tips">
+                  <li>Add quantifiable metrics (e.g. "Optimized API by 30%")</li>
+                  <li>Incorporate key metrics for DSA complexity patterns</li>
+                  <li>Reference a System Design project matching WebDev concepts</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- More Valuable Projects Paywall Section -->
+            <div class="glass-card premium-card locked-section-card" id="premium-projects-container">
+              <div class="lock-overlay" id="projects-lock-overlay">
+                <div class="lock-icon">🔒</div>
+                <h3>More Valuable Projects</h3>
+                <p>Unlock 50 curated Final Year project ideas with direct video walkthrough references to build your technical resume.</p>
+                <button class="btn btn-primary unlock-btn" data-item-id="projects-advanced" data-name="Advanced Projects Vault">
+                  Access Project Ideas (Free)
+                </button>
+              </div>
+
+              <div class="premium-projects-header">
+                <h3>More Valuable Projects</h3>
+                <span class="unlocked-badge">Unlocked ✓</span>
+              </div>
+              
+              <div class="premium-projects-list blur-disabled">
+                <!-- Tab for RAG project -->
+                <div class="premium-project-item">
+                  <div class="item-title-group">
+                    <span class="item-badge ai-badge">AI/ML</span>
+                    <h4>RAG-based Question Answering System</h4>
+                  </div>
+                  <p>Build a system that parses custom PDFs, indexes them into a vector database (ChromaDB), and queries LLMs (Anthropic Claude API) using semantically matching context.</p>
+                  <ul class="item-details">
+                    <li><strong>Architecture:</strong> PDF Loader -> Text Chunking -> Embeddings (OpenAI) -> Vector Storage -> LLM Context Retrieval</li>
+                    <li><strong>Stack:</strong> Python, LangChain, ChromaDB, FastAPI, Streamlit</li>
+                  </ul>
+                </div>
+
+                <!-- 50 Projects list searchable container -->
+                <div class="project-list-search-container" style="margin-block-start: 2rem;">
+                  <h4 style="margin-block-end: 0.5rem; color: var(--text-heading);">📂 50 Final Year Projects Library</h4>
+                  <input type="text" id="project-search-input" placeholder="🔍 Search projects by name (e.g., Blockchain, ML, Cyber)..." class="project-search-input" style="width: 100%; margin-block-end: 1rem;">
+                  
+                  <div class="projects-scroll-box scrollable-y" id="projects-scroll-list" style="max-height: 400px; display: flex; flex-direction: column; gap: 0.75rem;">
+                    <!-- Javascript will insert 50 projects here -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Company Programs & Offers -->
+        <section id="company-offers" class="company-offers-section">
+          <div class="section-header">
+            <h2 class="section-title">Company Programs &amp; Referrals</h2>
+            <p class="section-desc">Direct application portals, dates, preparation syllabi, and referral request templates for top MNCs.</p>
+          </div>
+          
+          <div class="glass-card premium-card locked-section-card" id="company-links-container">
+            <div class="lock-overlay" id="company-lock-overlay">
+              <div class="lock-icon">🔒</div>
+              <h3>Company Links Directory</h3>
+              <p>Get access to direct application links and referral request templates for recruitment programs by Google, Microsoft, OpenAI, Nvidia, and Anthropic.</p>
+              <button class="btn btn-primary unlock-btn" data-item-id="company-links" data-name="Company Referral Links Vault">
+                Access Link Directory (Free)
+              </button>
+            </div>
+
+            <div class="premium-company-header">
+              <h3>Company Programs &amp; Portals</h3>
+              <span class="unlocked-badge">Unlocked ✓</span>
+            </div>
+
+            <div class="company-section-label">🏢 Official AI Learning Hubs</div>
+            <div class="company-grid blur-disabled">
+              <div class="company-card">
+                <div class="company-logo google">G</div>
+                <h4>Google AI Learning Hub</h4>
+                <p>Google's free platform for AI skills — Generative AI, Responsible AI, Cloud tools, and career pathways.</p>
+                <a href="https://grow.google/ai" target="_blank" class="company-link">Explore Hub ↗</a>
+              </div>
+              <div class="company-card">
+                <div class="company-logo nvidia">N</div>
+                <h4>NVIDIA AI Learning Essentials</h4>
+                <p>NVIDIA's official portal with deep learning, computer vision, and generative AI modules from industry experts.</p>
+                <a href="https://www.nvidia.com/en-in/learn/ai-learning-essentials/" target="_blank" class="company-link">Explore Hub ↗</a>
+              </div>
+              <div class="company-card">
+                <div class="company-logo anthropic">A</div>
+                <h4>Anthropic SkillJar Academy</h4>
+                <p>Anthropic's official learning platform for Claude AI, prompt engineering, and AI safety fundamentals.</p>
+                <a href="https://anthropic.skilljar.com/" target="_blank" class="company-link">Explore Hub ↗</a>
+              </div>
+              <div class="company-card">
+                <div class="company-logo openai">O</div>
+                <h4>OpenAI Academy</h4>
+                <p>Official OpenAI platform covering GPT APIs, fine-tuning, embeddings, and responsible AI deployment.</p>
+                <a href="https://academy.openai.com/" target="_blank" class="company-link">Explore Hub ↗</a>
+              </div>
+              <div class="company-card">
+                <div class="company-logo ibm">I</div>
+                <h4>IBM SkillsBuild</h4>
+                <p>IBM's free hub for AI fundamentals, machine learning, watsonx, data science, and career pathways.</p>
+                <a href="https://skillsbuild.org/" target="_blank" class="company-link">Explore Hub ↗</a>
+              </div>
+            </div>
+
+            <div class="company-section-label" style="margin-block-start: 2.5rem;">🎓 Professional Certificates &amp; Programs</div>
+            <div class="company-grid blur-disabled">
+              <div class="company-card">
+                <div class="company-logo google">G</div>
+                <h4>Google Cybersecurity Professional Certificate</h4>
+                <p>8-course certificate on threat detection, SIEM tools, and network security — backed by Google on Coursera.</p>
+                <a href="https://coursera.org/professional-certificates/google-cybersecurity" target="_blank" class="company-link">Enroll Now ↗</a>
+              </div>
+              <div class="company-card">
+                <div class="company-logo nvidia">N</div>
+                <h4>NVIDIA Generative AI Course</h4>
+                <p>Hands-on DLI course for running and customizing state-of-the-art generative AI models on NVIDIA platforms.</p>
+                <a href="https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-FX-07+V1" target="_blank" class="company-link">Enroll Now ↗</a>
+              </div>
+              <div class="company-card">
+                <div class="company-logo google">G</div>
+                <h4>Google Cloud: Generative AI Leader</h4>
+                <p>Lead GenAI transformations using Google Cloud tools and responsible AI practices — Coursera professional cert.</p>
+                <a href="https://coursera.org/professional-certificates/generative-ai-for-leaders" target="_blank" class="company-link">Enroll Now ↗</a>
+              </div>
+              <div class="company-card">
+                <div class="company-logo microsoft">M</div>
+                <h4>Microsoft AI &amp; ML Engineering</h4>
+                <p>Azure AI services, machine learning, MLOps, and responsible AI engineering — professional certificate on Coursera.</p>
+                <a href="https://coursera.org/professional-certificates/microsoft-ai-and-ml-engineering" target="_blank" class="company-link">Enroll Now ↗</a>
+              </div>
+              <div class="company-card">
+                <div class="company-logo meta">f</div>
+                <h4>Meta: Coding Interview Preparation</h4>
+                <p>Meta's official course on algorithms, data structures, debugging, and coding interview problem-solving strategies.</p>
+                <a href="https://coursera.org/learn/coding-interview-preparation" target="_blank" class="company-link">Enroll Now ↗</a>
+              </div>
+              <div class="company-card">
+                <div class="company-logo linkedin">in</div>
+                <h4>Microsoft &amp; LinkedIn: Career Essentials in GenAI</h4>
+                <p>5-course path on GenAI basics, Microsoft Copilot, AI ethics, and how AI transforms the future of work.</p>
+                <a href="https://linkedin.com/learning/paths/career-essentials-in-generative-ai-by-microsoft-and-linkedin" target="_blank" class="company-link">Enroll Now ↗</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Authentication Dialog Modal (Google Account Authentication) -->
+      <dialog id="auth-dialog" class="checkout-dialog">
+        <div class="checkout-wrapper" style="max-width: 400px; padding: 2rem;">
+          <div class="checkout-header" style="margin-block-end: 1.5rem; justify-content: space-between; align-items: center; display: flex; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+            <h3 id="auth-modal-title" style="font-size: 1.25rem; font-weight: 700; color: var(--text-heading); margin: 0;">Sign In</h3>
+            <button id="close-auth-btn" class="close-btn" style="background: none; border: none; font-size: 1.75rem; color: var(--text-muted); cursor: pointer;">&times;</button>
+          </div>
+          
+          <form id="auth-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="form-group" style="display: flex; flex-direction: column; text-align: left;">
+              <label for="auth-email" style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted); margin-block-end: 0.5rem; display: block;">Gmail Address</label>
+              <input type="email" id="auth-email" placeholder="username@gmail.com" required style="width: 100%; height: 42px; padding-inline: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.05); color: var(--text-body); font-size: 0.95rem;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; text-align: left;">
+              <label for="auth-password" style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted); margin-block-end: 0.5rem; display: block;">Password</label>
+              <input type="password" id="auth-password" placeholder="••••••••" required style="width: 100%; height: 42px; padding-inline: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.05); color: var(--text-body); font-size: 0.95rem;">
+            </div>
+
+            <p style="font-size: 0.8rem; text-align: right; margin: 0;">
+              <a href="#" id="auth-toggle-link" style="color: var(--color-teal); text-decoration: underline;">Create account instead</a>
+            </p>
+
+            <div id="auth-error-msg" class="hidden" style="color: #f87171; font-size: 0.82rem; text-align: left; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); padding: 0.5rem; border-radius: 4px;"></div>
+
+            <button type="submit" id="auth-submit-btn" class="btn btn-accent btn-full" style="height: 44px; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; justify-content: center;">
+              <span class="auth-btn-text">Sign In</span>
+              <span class="auth-btn-spinner hidden" style="width: 18px; height: 18px; border: 2px solid white; border-top-color: transparent; border-radius: 50%; animation: spin 0.8s linear infinite;"></span>
+            </button>
+          </form>
+          
+          <div style="margin-block-start: 1.5rem; padding-block-start: 1rem; border-block-start: 1px solid var(--border-color); text-align: center; font-size: 0.72rem; color: var(--text-muted); line-height: 1.4;">
+            🔒 Verified Gmail sign-in is required to access files.
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="#" class="logo-brand" style="margin-block-end: 1rem; display: inline-block;">
+              <span class="logo-accent">Placements</span> Simplified
+            </a>
+            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+              Curated, high-yield preparation resources to cut the crowd and secure your dream offer in technical placement cycles.
+            </p>
+          </div>
+          
+          <div class="footer-links-col">
+            <h4>Connect &amp; Contact</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+              <li>LinkedIn: <a href="https://www.linkedin.com/in/pranshul-rajyan" target="_blank" style="color: var(--color-teal); text-decoration: underline;">pranshul-rajyan ↗</a></li>
+              <li>Support &amp; Partnerships: <a href="mailto:rajyanpranshul@gmail.com" style="color: var(--color-teal); text-decoration: underline;">rajyanpranshul@gmail.com</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-legal-col">
+            <h4>Legal &amp; Policy</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+              <li><strong>Refund Policy:</strong> Strictly no refunds. All digital purchases are immediate and final.</li>
+              <li><strong>Disclaimer:</strong> Materials are curated from anonymous student placement sources across public platforms.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-copyright-row" style="margin-block-start: 3rem; padding-block-start: 1.5rem; border-block-start: 1px solid hsla(215, 20%, 50%, 0.1); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; font-size: 0.78rem; color: hsl(215, 10%, 50%);">
+          <p>&copy; 2026 Placements Simplified. All rights reserved.</p>
+          <p>Disclaimer: Simulated payment gateways. No actual money is processed.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Canvas for confetti simulation -->
+    <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+    <!-- Razorpay Standard Checkout SDK -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
