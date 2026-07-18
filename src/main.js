@@ -3,7 +3,8 @@ import './style.css';
 
 posthog.init('phc_zHQqzJta9daxdCjXxVCB5w3xvRCsChUfTz7jVyQ2E8k', {
   api_host: 'https://us.i.posthog.com',
-  defaults: '2026-05-30'
+  defaults: '2026-05-30',
+  capture_pageview: true
 });
 
 // -------------------------------------------------------------
@@ -17,7 +18,7 @@ function decodeJwt(token) {
   try {
     const base64Url = token.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+    const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
       return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
     }).join(''));
     return JSON.parse(jsonPayload);
@@ -164,7 +165,7 @@ function restoreUnlocks() {
 
   // Resume Reviewer Tries update
   updateResumeTriesUI();
-  
+
   // Calculate active checklists progress
   calculateRoadmapProgress('dsa-sprint');
   calculateRoadmapProgress('dsa-mastery');
@@ -239,7 +240,7 @@ function initRoadmapChecklists() {
 
     const roadmapId = cb.getAttribute('data-roadmap');
     const checkboxes = document.querySelectorAll(`.roadmap-checkbox[data-roadmap="${roadmapId}"]`);
-    
+
     checkboxes.forEach((box, index) => {
       if (box === cb) {
         localStorage.setItem(`check_${roadmapId}_${index}`, cb.checked ? 'true' : 'false');
@@ -270,7 +271,7 @@ function calculateRoadmapProgress(roadmapId) {
   });
 
   const percent = Math.round((checkedCount / checkboxes.length) * 100);
-  
+
   const pctLabel = document.getElementById(`${roadmapId}-progress-pct`);
   const fillBar = document.getElementById(`${roadmapId}-progress-fill`);
 
@@ -335,7 +336,7 @@ function initResumeReviewer() {
 
         const matchPercentage = skillsArr.length > 0 ? (matches / skillsArr.length) * 100 : 0;
         const score = Math.max(45, Math.min(95, Math.round(50 + matchPercentage * 0.45)));
-        
+
         let tips = [];
         if (score < 65) {
           tips = [
@@ -382,7 +383,7 @@ function showAnalysisResult(score, tips) {
   const tipsList = resultBox.querySelector('.analysis-tips');
 
   if (scoreText) scoreText.textContent = `${score}%`;
-  
+
   if (tipsList) {
     tipsList.innerHTML = '';
     tips.forEach(tip => {
@@ -429,7 +430,7 @@ function initAuth() {
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.unlock-btn');
     if (!btn) return;
-    
+
     const isLoggedIn = localStorage.getItem('user_logged_in') === 'true';
     if (!isLoggedIn) {
       openAuthModal();
@@ -482,7 +483,7 @@ function initAuth() {
   if (authForm) {
     authForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const emailInput = document.getElementById('auth-email');
       const passwordInput = document.getElementById('auth-password');
       const emailVal = emailInput ? emailInput.value.trim() : '';
@@ -626,7 +627,7 @@ function getNameFromEmail(email) {
       if (textOnly.length === 0) return '';
       return textOnly.charAt(0).toUpperCase() + textOnly.slice(1).toLowerCase();
     }).filter(p => p.length > 0);
-    
+
     if (capitalizedParts.length === 0) return 'Google User';
     return capitalizedParts.join(' ');
   } catch (e) {
