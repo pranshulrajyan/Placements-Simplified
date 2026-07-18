@@ -57,14 +57,11 @@
    ```bash
    git clone [https://github.com/ypranshulrajyan/placements-simplified.git](https://github.com/pranshulrajyan/placements-simplified.git)
    cd placements-simplified
-   Install dependencies:
 
-   1. Install dependencies:
-        Bash
+1. Install the Project dependencies:
+    npm install
 
-        npm install
-    2. Launch the local development server:
-        Bash
+2. Start the local development server:
+    npm run dev
 
-        npm run dev
-    3.Access the web app locally at http://localhost:5173
+3. Access the web app locally at http://localhost:5173
