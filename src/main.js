@@ -1,4 +1,10 @@
+import posthog from 'posthog-js';
 import './style.css';
+
+posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
+  api_host: import.meta.env.VITE_POSTHOG_HOST,
+  defaults: '2026-05-30'
+});
 
 // -------------------------------------------------------------
 // Google Sign-In (OAuth) Credentials Configuration
@@ -17,6 +23,7 @@ function decodeJwt(token) {
     return JSON.parse(jsonPayload);
   } catch (e) {
     console.error("Failed to decode JWT:", e);
+    posthog.captureException(e, { flow: 'google_jwt_decode' });
     return null;
   }
 }
@@ -41,6 +48,7 @@ function restoreUnlocks() {
   const email = localStorage.getItem('user_email') || '';
   if (isLoggedIn && email) {
     setUserOnline(email);
+    posthog.identify(email, { email, name: localStorage.getItem('user_name') || undefined });
   }
 
   // Toggle roadmaps content display
@@ -192,6 +200,9 @@ function initTabs() {
       panels.forEach(p => p.classList.remove('active'));
 
       tab.classList.add('active');
+      posthog.capture('roadmap_tab_selected', {
+        domain: targetTab.replace('-content', '')
+      });
       const panel = document.getElementById(targetTab);
       if (panel) panel.classList.add('active');
     });
@@ -236,6 +247,10 @@ function initRoadmapChecklists() {
     });
 
     calculateRoadmapProgress(roadmapId);
+    posthog.capture('roadmap_checklist_item_toggled', {
+      roadmap: roadmapId,
+      completed: cb.checked
+    });
   });
 }
 
@@ -347,6 +362,12 @@ function initResumeReviewer() {
 
         showAnalysisResult(score, tips);
         updateResumeTriesUI();
+        posthog.capture('resume_review_completed', {
+          score_range: score < 65 ? 'below_65' : score < 85 ? '65_to_84' : '85_and_above',
+          matched_skill_count: matches,
+          requested_skill_count: skillsArr.length,
+          was_logged_in: isLoggedIn
+        });
 
         analyzeBtn.disabled = false;
         analyzeBtn.innerHTML = originalText;
@@ -428,6 +449,7 @@ function initAuth() {
         localStorage.setItem('user_logged_in', 'false');
         localStorage.removeItem('user_email');
         localStorage.removeItem('user_name');
+        posthog.reset();
         restoreUnlocks();
         alert("Logged out successfully.");
       } else {
@@ -577,6 +599,8 @@ function initAuth() {
         localStorage.setItem('user_logged_in', 'true');
         localStorage.setItem('user_email', emailVal.toLowerCase());
         localStorage.setItem('user_name', name);
+        posthog.identify(emailVal.toLowerCase(), { email: emailVal.toLowerCase(), name });
+        posthog.capture('auth_completed', { mode: isSignUpMode ? 'sign_up' : 'sign_in' });
 
         if (spinner) spinner.classList.add('hidden');
         if (text) text.classList.remove('hidden');
@@ -752,6 +776,9 @@ function initProjectsList() {
       const query = e.target.value.toLowerCase();
       const filtered = finalYearProjects.filter(p => p.title.toLowerCase().includes(query));
       renderProjects(filtered);
+      if (query) {
+        posthog.capture('project_search_used', { result_count: filtered.length });
+      }
     });
   }
 }

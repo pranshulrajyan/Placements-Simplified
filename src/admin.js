@@ -1,5 +1,12 @@
 // Placements Simplified Admin Console Script
 
+import posthog from 'posthog-js';
+
+posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
+  api_host: import.meta.env.VITE_POSTHOG_HOST,
+  defaults: '2026-05-30'
+});
+
 const ADMIN_EMAIL = "rajyanpranshul@gmail.com";
 
 // Only seed the real admin user account - no fake mock users
@@ -49,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Access approved: load and render dashboard
+  posthog.identify(currentUserEmail, { email: currentUserEmail, role: 'admin' });
   if (deniedPanel) deniedPanel.classList.add('hidden');
   if (dashboardPanel) dashboardPanel.classList.remove('hidden');
 
