@@ -1,8 +1,8 @@
 import posthog from 'posthog-js';
 import './style.css';
 
-posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
-  api_host: import.meta.env.VITE_POSTHOG_HOST,
+posthog.init('phc_zHQqzJta9daxdCjXxVCB5w3xvRCsChUfTz7jVyQ2E8k', {
+  api_host: 'https://us.i.posthog.com',
   defaults: '2026-05-30'
 });
 
