@@ -40,7 +40,7 @@
 * **Frontend Build Tool**: [Vite.js](https://vite.dev/) (lightning-fast development and optimized production asset bundles)
 * **Styling**: Modern, fluid vanilla CSS containing glassmorphism, responsive grid layouts, and custom interactive themes.
 * **Authentication**: Simulated Google Identity Services (OAuth JWT decode helper).
-* **Analytics**: Integrated [Vercel Web Analytics](https://vercel.com/analytics) script to monitor real-time visitor insights.
+* **Analytics**: Integrated [Vercel Web Analytics](https://vercel.com/analytics) and [Posthog Web Analytics](https://posthog.com/web-analytics)script to monitor real-time visitor insights.
 * **State Management**: Persisted checklist items, resume reviewer attempts, and local registrations utilizing synchronized `localStorage`.
 
 ---
