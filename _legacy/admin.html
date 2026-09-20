@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Placements Simplified</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+    
+    <style>
+      :root {
+        --font-body: "Inter", sans-serif;
+        --font-heading: "Outfit", sans-serif;
+        
+        --bg-primary: #05080f;
+        --bg-secondary: #090e1a;
+        --bg-glass: rgba(16, 25, 45, 0.65);
+        --bg-glass-hover: rgba(22, 35, 60, 0.85);
+        
+        --border-subtle: rgba(255, 255, 255, 0.08);
+        --border-focus: #0df2db;
+        
+        --text-heading: #ffffff;
+        --text-primary: #ffffff;
+        --text-muted: #a3b3cc;
+        
+        --color-purple: #9355f6;
+        --color-teal: #0df2db;
+        --color-red: #ef4444;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-muted);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 2rem 1rem;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      /* Glass panel panel */
+      .glass-panel {
+        background-color: var(--bg-glass);
+        border: 1px solid var(--border-subtle);
+        backdrop-filter: blur(16px);
+        border-radius: 16px;
+        padding: 2.25rem;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Header */
+      .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--border-subtle);
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .logo-brand {
+        font-family: var(--font-heading);
+        color: var(--text-heading);
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      .logo-accent {
+        color: var(--color-purple);
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      /* Buttons */
+      .btn {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-heading);
+        border: 1px solid var(--border-subtle);
+        padding: 0.6rem 1.25rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .btn-primary {
+        background: var(--color-purple);
+        border-color: var(--color-purple);
+      }
+
+      .btn-primary:hover {
+        background: hsl(263, 90%, 60%);
+        border-color: hsl(263, 90%, 60%);
+        box-shadow: 0 0 20px rgba(147, 85, 246, 0.3);
+      }
+
+      .btn-danger {
+        background: rgba(239, 68, 68, 0.1);
+        border-color: rgba(239, 68, 68, 0.2);
+        color: var(--color-red);
+      }
+
+      .btn-danger:hover {
+        background: rgba(239, 68, 68, 0.2);
+        border-color: var(--color-red);
+      }
+
+      /* Stats cards */
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2.25rem;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--color-purple);
+      }
+
+      .stat-card.teal::before {
+        background: var(--color-teal);
+      }
+
+      .stat-card.online::before {
+        background: #10b981;
+      }
+
+      .stat-label {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+      }
+
+      .stat-value {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--text-heading);
+        margin-top: 0.5rem;
+        font-family: var(--font-heading);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      /* Pulsing Dot indicator */
+      .pulse-dot {
+        width: 10px;
+        height: 10px;
+        background-color: #10b981;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+        animation: pulse 1.6s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+        }
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+        }
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+        }
+      }
+
+      /* Table Wrapper & Controls */
+      .table-wrapper {
+        background: rgba(255, 255, 255, 0.01);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .table-controls {
+        padding: 1.25rem;
+        border-bottom: 1px solid var(--border-subtle);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .search-input {
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-heading);
+        padding: 0.6rem 1rem;
+        font-size: 0.88rem;
+        border-radius: 8px;
+        outline: none;
+        width: 100%;
+        max-width: 320px;
+        transition: border-color 0.2s ease;
+      }
+
+      .search-input:focus {
+        border-color: var(--border-focus);
+      }
+
+      /* Table Styles */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+      }
+
+      th, td {
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
+      }
+
+      th {
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text-heading);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        letter-spacing: 0.05em;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      tr:not(:last-child) td {
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      tr:hover td {
+        background: rgba(255, 255, 255, 0.01);
+      }
+
+      .email-cell {
+        font-family: monospace;
+        color: var(--text-muted);
+      }
+
+      .date-cell {
+        color: var(--text-muted);
+      }
+
+      /* Badges */
+      .badge-admin {
+        background-color: rgba(13, 242, 219, 0.12);
+        border: 1px solid rgba(13, 242, 219, 0.25);
+        color: var(--color-teal);
+        font-size: 0.72rem;
+        padding: 0.15rem 0.4rem;
+        border-radius: 4px;
+        font-weight: 600;
+        margin-left: 0.5rem;
+        display: inline-block;
+      }
+
+      /* Access Denied wrapper */
+      .denied-wrapper {
+        text-align: center;
+        max-width: 460px;
+        margin: 4rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+      }
+
+      .denied-icon {
+        font-size: 3.5rem;
+      }
+
+      .denied-title {
+        font-family: var(--font-heading);
+        color: var(--text-heading);
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+
+      .denied-text {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        color: var(--text-muted);
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 1rem 0.5rem;
+        }
+        .glass-panel {
+          padding: 1.25rem;
+        }
+        th, td {
+          padding: 0.75rem;
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+    <!-- Vercel Web Analytics -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      const script = document.createElement('script');
+      script.defer = true;
+      script.src = '/_vercel/insights/script.js';
+      document.head.appendChild(script);
+    </script>
+  </head>
+  <body>
+    <!-- Access Denied Panel -->
+    <div id="denied-panel" class="glass-panel denied-wrapper">
+      <div class="denied-icon">🔒</div>
+      <h2 class="denied-title">Access Denied</h2>
+      <p class="denied-text">This is a private administrative dashboard. Only logged-in admin email addresses (<strong>rajyanpranshul@gmail.com</strong>) have authorized clearance to view this data.</p>
+      <a href="/index.html" class="btn">Back to Home</a>
+    </div>
+
+    <!-- Authorized Dashboard Panel -->
+    <div id="dashboard-panel" class="container glass-panel hidden">
+      <div class="dashboard-header">
+        <div>
+          <a href="/index.html" class="logo-brand">
+            <span class="logo-accent">Placements</span> Simplified
+          </a>
+          <span style="font-size: 0.78rem; color: var(--color-teal); display: block; margin-top: 0.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Admin Portal</span>
+        </div>
+        <div class="header-actions">
+          <button id="clear-db-btn" class="btn btn-danger">🗑️ Reset DB</button>
+          <a href="/index.html" class="btn btn-primary">Back to Website</a>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-label">Total Registered Users</span>
+          <span id="stat-total-users" class="stat-value">0</span>
+        </div>
+        <div class="stat-card teal">
+          <span class="stat-label">Live Active Students</span>
+          <span class="stat-value" id="stat-live-users">
+            <span class="pulse-dot"></span> <span id="live-user-count">3</span>
+          </span>
+        </div>
+        <div class="stat-card online">
+          <span class="stat-label">Database Connection</span>
+          <span class="stat-value" style="color: #10b981; font-size: 1.15rem; font-weight: 600; font-family: var(--font-body);">
+            Connected
+          </span>
+        </div>
+      </div>
+
+      <!-- User Database Table -->
+      <div class="table-wrapper">
+        <div class="table-controls">
+          <input type="text" id="user-search" class="search-input" placeholder="Search by email or name..." />
+          <span style="font-size: 0.8rem; color: var(--text-muted);" id="user-count-display">Showing 0 users</span>
+        </div>
+        
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Account Creation Date</th>
+                <th>Last Sign-In Time</th>
+              </tr>
+            </thead>
+            <tbody id="user-table-body">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/admin.js"></script>
+  </body>
+</html>

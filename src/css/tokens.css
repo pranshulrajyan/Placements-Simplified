@@ -1,0 +1,23 @@
+:root {
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-serif: "Source Serif 4", "Georgia", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --paper: #f4f1ea;
+  --paper-deep: #ebe6db;
+  --surface: #fffcf7;
+  --ink: #1c1b18;
+  --ink-soft: #4a4740;
+  --line: #d7d0c4;
+  --line-strong: #b9b09f;
+  --navy: #1e3a5f;
+  --navy-hover: #16314f;
+  --brick: #9b3d2d;
+  --ok: #2f5d3a;
+  --warn: #8a5a12;
+
+  --shadow: 0 1px 0 rgba(28, 27, 24, 0.06);
+  --radius: 2px;
+  --header-h: 64px;
+  --measure: 1120px;
+}
